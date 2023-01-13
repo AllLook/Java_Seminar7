@@ -19,10 +19,15 @@ public class StudentServiceImpl implements DataService{
         ReaderFromTxt.read(user);
     }
 
-    public void readGroup(Teacher superVisor, List<Teacher> studGroup) throws IOException { // метод чтения преподавателя и листа студентов(поля из data.StudentGroup
-        ReaderFromTxt.read(superVisor);
-        ReaderFromTxt.read((User) studGroup);
-    }
+
+
+
+
+
+
 
 
 }
+
+
+
