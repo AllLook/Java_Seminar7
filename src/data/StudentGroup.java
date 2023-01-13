@@ -1,19 +1,67 @@
 package data;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
+import java.util.Spliterator;
+import java.util.function.Consumer;
 
-public class StudentGroup {
-    Teacher superVisor;
-    List<Teacher> studGroup = new ArrayList<>(10);
+public class StudentGroup implements Iterable<Student> {
+    List<Teacher> teacher;
+    List<Student> studGroup = new ArrayList<>(10);
+    List<Student> studGroup1 = new ArrayList<>(10);
+    List<Student> studGroup2 = new ArrayList<>(10);
 
-    public StudentGroup(Teacher superVisor, List<Teacher> studGroup){
-        this.superVisor = superVisor;
+
+    public StudentGroup(List<Teacher> teacher,List<Student> studGroup ){
+        this.teacher = teacher;
         this.studGroup = studGroup;
 
     }
 
+    public StudentGroup() {
+
     }
+
+    public List<Student> getStudGroup1() {
+        return studGroup1;
+    }
+
+    public List<Student> getStudGroup2() {
+        return studGroup2;
+    }
+
+    public Teacher getTeacher() {
+        return (Teacher) teacher;
+    }
+
+    public List<Student> getStudGroup() {
+        return studGroup;
+    }
+
+    public void setTeacher(List <Teacher>teacher) {
+        this.teacher = teacher;
+    }
+
+    public void setStudGroup(List<Student> studGroup) {
+        this.studGroup = studGroup;
+    }
+
+    @Override
+    public Iterator<Student> iterator() { // для класса Teacher через интерфейс Iterator вызывается метод iterator
+        return new StudentGroupIterator(this);// экземпляр итератора возвращается
+    }
+
+    @Override
+    public void forEach(Consumer<? super Student> action) {
+        Iterable.super.forEach((Consumer<? super Student>) action);
+    }
+
+    @Override
+    public Spliterator<Student> spliterator() {
+        return Iterable.super.spliterator();
+    }
+}
 
 
 

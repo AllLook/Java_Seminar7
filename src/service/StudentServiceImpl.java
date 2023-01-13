@@ -1,4 +1,5 @@
 package service;
+import data.Student;
 import data.Teacher;
 import data.User;
 import util.ReaderFromTxt;
@@ -19,10 +20,13 @@ public class StudentServiceImpl implements DataService{
         ReaderFromTxt.read(user);
     }
 
-    public void readGroup(Teacher superVisor, List<Teacher> studGroup) throws IOException { // метод чтения преподавателя и листа студентов(поля из data.StudentGroup
-        ReaderFromTxt.read(superVisor);
-        ReaderFromTxt.read((User) studGroup);
+
+    public void saveStudent(Student student) {
     }
 
-
+    public void deleteStudent(Student student) {
+    }
 }
+
+
+

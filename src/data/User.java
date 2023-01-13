@@ -1,15 +1,28 @@
 package data;
-import data.User;
 
 public abstract class User {
     private String fio;
     private  int age;
     private int passport;
 
+    private int year0fBirth;
+
     public User(String fio, int age, int passport){
         this.fio = fio;
         this.age = age;
         this.passport = passport;
+        this.year0fBirth = year0fBirth;
+    }
+    public  User(String fio){
+        this.fio = fio;
+    }
+
+    public void setYear0fBirth(int year0fBirth) {
+        this.year0fBirth = year0fBirth;
+    }
+
+    public int getYear0fBirth() {
+        return year0fBirth;
     }
 
     public String getFio() {
