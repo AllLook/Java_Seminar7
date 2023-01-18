@@ -27,7 +27,7 @@ public class Controller {
 
     }
     public void GroupStreamSort(GroupStream groupStream){
-        GroupStreamServiceImpl.sortStream(groupStream);
+        GroupStreamServiceImpl.sortStream(groupStream.getGroupStudent());
     }
 
     }

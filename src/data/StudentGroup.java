@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.Spliterator;
 import java.util.function.Consumer;
 
-public class StudentGroup implements Iterable<Student> {
+public class StudentGroup implements Iterable<Teacher> {
     List<Teacher> teacher;
     List<Student> studGroup = new ArrayList<>(10);
     List<Student> studGroup1 = new ArrayList<>(10);
@@ -48,17 +48,17 @@ public class StudentGroup implements Iterable<Student> {
     }
 
     @Override
-    public Iterator<Student> iterator() { // для класса Teacher через интерфейс Iterator вызывается метод iterator
+    public Iterator<Teacher> iterator() { // для класса Teacher через интерфейс Iterator вызывается метод iterator
         return new StudentGroupIterator(this);// экземпляр итератора возвращается
     }
 
     @Override
-    public void forEach(Consumer<? super Student> action) {
-        Iterable.super.forEach((Consumer<? super Student>) action);
+    public void forEach(Consumer<? super Teacher> action) {
+        Iterable.super.forEach(action);
     }
 
     @Override
-    public Spliterator<Student> spliterator() {
+    public Spliterator<Teacher> spliterator() {
         return Iterable.super.spliterator();
     }
 }

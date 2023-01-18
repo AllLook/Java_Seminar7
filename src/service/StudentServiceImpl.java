@@ -1,5 +1,4 @@
 package service;
-import data.Student;
 import data.Teacher;
 import data.User;
 import util.ReaderFromTxt;
@@ -21,11 +20,13 @@ public class StudentServiceImpl implements DataService{
     }
 
 
-    public void saveStudent(Student student) {
-    }
 
-    public void deleteStudent(Student student) {
-    }
+
+
+
+
+
+
 }
 
 

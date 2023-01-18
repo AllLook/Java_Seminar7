@@ -13,9 +13,6 @@ public abstract class User {
         this.passport = passport;
         this.year0fBirth = year0fBirth;
     }
-    public  User(String fio){
-        this.fio = fio;
-    }
 
     public void setYear0fBirth(int year0fBirth) {
         this.year0fBirth = year0fBirth;

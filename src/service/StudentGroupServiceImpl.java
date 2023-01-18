@@ -22,6 +22,7 @@ public class StudentGroupServiceImpl implements DataService {
 
     }
 
+
     public void remove(Student fio) {
         Iterator<Student> studentIterator = studentGroup.getStudGroup().iterator(); // достаем лист studGroup из StudentGroup и применяем метод iterator();
         while (studentIterator.hasNext()) {
@@ -29,14 +30,23 @@ public class StudentGroupServiceImpl implements DataService {
             if (fio.equals(student.getFio())) {
                 studentIterator.remove(); // применили метод из итератора remove?
 
+                        }
+
+                    }
+
+                }
+
+
+                public void sortStudent(StudentGroup studentGroup){
+                    Collections.sort(studentGroup.getStudGroup(), new UserComporator());
+                }
+
+
+
+
+
             }
 
-        }
 
-    }
 
-    public void sortStudent(StudentGroup studentGroup) {
-        Collections.sort(studentGroup.getStudGroup(), new UserComporator());
-    }
 
-}
