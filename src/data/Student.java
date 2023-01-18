@@ -2,9 +2,6 @@ package data;
 
 public class Student extends User implements Comparable<Student>{
     private int groupNumber;
-    public Student(String fio){
-        super(fio);
-    }
     public Student(String fio, int age, int passport, int groupNumber, int year0fBirth) {
         super(fio, age, passport);
         this.groupNumber = groupNumber;

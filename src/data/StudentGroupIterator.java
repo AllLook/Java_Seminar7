@@ -2,9 +2,9 @@ package data;
 import java.util.Iterator;
 
 
-public class StudentGroupIterator implements Iterator<Student> {
+public class StudentGroupIterator implements Iterator<Teacher> {
     private StudentGroup studentGroup; // поле типа содержащая преподователя и лист студентов
-    private Iterator<Student> students;// итератор для поля содержащей все данные о персоне
+    private Iterator<Teacher> students;// итератор для поля содержащей все данные о персоне
 
     public StudentGroupIterator(StudentGroup studentGroup){
         this.studentGroup = studentGroup;
@@ -23,7 +23,7 @@ public class StudentGroupIterator implements Iterator<Student> {
     }
 
     @Override
-    public Student next() { //  следующий элемент из класса Teacher
+    public Teacher next() { //  следующий элемент из класса Teacher
         return this.students.next();
     }
 

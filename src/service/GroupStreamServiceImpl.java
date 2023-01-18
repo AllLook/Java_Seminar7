@@ -7,8 +7,7 @@ import java.util.Collections;
 
 public class GroupStreamServiceImpl {
 
-    public static void sortStream(GroupStream groupStream) {
-        Collections.sort(groupStream.getGroupStudent());
+    public static void sortStream(GroupStream groupStream){
+        Collections.sort(groupStream.getGroupStudent(),new GroupStreamComparator());
     }
-
 }

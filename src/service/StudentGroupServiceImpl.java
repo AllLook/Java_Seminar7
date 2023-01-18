@@ -21,12 +21,11 @@ public class StudentGroupServiceImpl implements DataService {
     public void read(User user) throws IOException {
 
     }
-
-    public void remove(Student fio) {
-        Iterator<Student> studentIterator = studentGroup.getStudGroup().iterator(); // достаем лист studGroup из StudentGroup и применяем метод iterator();
-        while (studentIterator.hasNext()) {
-            Student student = studentIterator.next();
-            if (fio.equals(student.getFio())) {
+    public void remove(Student fio){
+        Iterator<Teacher> studentIterator = studentGroup.getStudGroup().iterator(); // достаем лист studGroup из StudentGroup и применяем метод iterator();
+        while (studentIterator.hasNext()){
+            Teacher student = studentIterator.next();
+            if(fio.equals(student.getFio())){
                 studentIterator.remove(); // применили метод из итератора remove?
 
             }
@@ -35,8 +34,11 @@ public class StudentGroupServiceImpl implements DataService {
 
     }
 
-    public void sortStudent(StudentGroup studentGroup) {
-        Collections.sort(studentGroup.getStudGroup(), new UserComporator());
+    public  void  sortStudent(StudentGroup studentGroup){
+        Collections.sort(studentGroup.getStudGroup()  , new UserComporator());
     }
+
+
+
 
 }

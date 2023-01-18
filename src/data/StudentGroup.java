@@ -6,14 +6,14 @@ import java.util.List;
 import java.util.Spliterator;
 import java.util.function.Consumer;
 
-public class StudentGroup implements Iterable<Student> {
+public class StudentGroup implements Iterable<Teacher> {
     List<Teacher> teacher;
-    List<Student> studGroup = new ArrayList<>(10);
-    List<Student> studGroup1 = new ArrayList<>(10);
-    List<Student> studGroup2 = new ArrayList<>(10);
+    List<Teacher> studGroup = new ArrayList<>(10);
+    List<Teacher> studGroup1 = new ArrayList<>(10);
+    List<Teacher> studGroup2 = new ArrayList<>(10);
 
 
-    public StudentGroup(List<Teacher> teacher,List<Student> studGroup ){
+    public StudentGroup(List<Teacher> teacher,List<Teacher> studGroup ){
         this.teacher = teacher;
         this.studGroup = studGroup;
 
@@ -23,11 +23,11 @@ public class StudentGroup implements Iterable<Student> {
 
     }
 
-    public List<Student> getStudGroup1() {
+    public List<Teacher> getStudGroup1() {
         return studGroup1;
     }
 
-    public List<Student> getStudGroup2() {
+    public List<Teacher> getStudGroup2() {
         return studGroup2;
     }
 
@@ -35,7 +35,7 @@ public class StudentGroup implements Iterable<Student> {
         return (Teacher) teacher;
     }
 
-    public List<Student> getStudGroup() {
+    public List<Teacher> getStudGroup() {
         return studGroup;
     }
 
@@ -43,22 +43,22 @@ public class StudentGroup implements Iterable<Student> {
         this.teacher = teacher;
     }
 
-    public void setStudGroup(List<Student> studGroup) {
+    public void setStudGroup(List<Teacher> studGroup) {
         this.studGroup = studGroup;
     }
 
     @Override
-    public Iterator<Student> iterator() { // для класса Teacher через интерфейс Iterator вызывается метод iterator
+    public Iterator<Teacher> iterator() { // для класса Teacher через интерфейс Iterator вызывается метод iterator
         return new StudentGroupIterator(this);// экземпляр итератора возвращается
     }
 
     @Override
-    public void forEach(Consumer<? super Student> action) {
-        Iterable.super.forEach((Consumer<? super Student>) action);
+    public void forEach(Consumer<? super Teacher> action) {
+        Iterable.super.forEach(action);
     }
 
     @Override
-    public Spliterator<Student> spliterator() {
+    public Spliterator<Teacher> spliterator() {
         return Iterable.super.spliterator();
     }
 }
