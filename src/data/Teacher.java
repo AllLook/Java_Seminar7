@@ -1,12 +1,12 @@
 package data;
 
-public class Teacher extends  User{
+public class Teacher extends User {
     private String kafedra;
     private String fio = getFio();
     private int age = getAge();
     private int pasport = getPassport();
 
-    public Teacher(String fio, int age, int passport, String kafedra ) {
+    public Teacher(String fio, int age, int passport, String kafedra) {
         super(fio, age, passport);
         this.kafedra = kafedra;
     }

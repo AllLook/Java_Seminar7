@@ -9,9 +9,8 @@ import java.util.List;
 public class GroupStreamServiceImpl {
 
 
-
-    public static void sortStream(GroupStream groupStream){
-        Collections.sort(groupStream.getGroupStudent());
+    public static void sortStream(GroupStream groupStream) {
+        Collections.sort(groupStream.getGroupStudent()); // сортировка потока
     }
 
 }

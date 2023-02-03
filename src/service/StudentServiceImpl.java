@@ -1,13 +1,14 @@
 package service;
-import data.Teacher;
+
+import data.Student;
 import data.User;
+import terminal.executable.Command;
 import util.ReaderFromTxt;
 import util.WriterToTxt;
 
 import java.io.IOException;
-import java.util.List;
 
-public class StudentServiceImpl implements DataService{
+public class StudentServiceImpl implements DataService {
 
     @Override
     public void create(User user) throws IOException {
@@ -20,13 +21,13 @@ public class StudentServiceImpl implements DataService{
     }
 
 
+    public void deleteStudent(Student student) {
 
+    }
 
+    public void createStudent(Command student) {
 
-
-
-
-
+    }
 }
 
 
